@@ -4,17 +4,17 @@ A Claude [skill](https://docs.claude.com/en/docs/claude-code/skills) that makes 
 
 When someone mentions they use a screen reader (or names VoiceOver, NVDA, JAWS, and so on), the skill switches Claude into a mode that keeps every reply easy to *listen to*: it puts the answer first, uses real headings and numbered lists you can move through, and avoids the things that are painful to hear — tables (a screen reader reads them as a stream of "vertical bar, vertical bar…"), charts drawn out of text characters, piles of emoji, raw web links, and big blocks of code with no explanation.
 
-## What we tested
+## What I tested
 
-We asked Claude the same 5 everyday questions — compare some developer tools, explain how OAuth login works, write a small Python function, summarize an accessibility standard, and "chart" four quarters of revenue — and we asked each one three different ways:
+I asked Claude the same 5 everyday questions — compare some developer tools, explain how OAuth login works, write a small Python function, summarize an accessibility standard, and "chart" four quarters of revenue — and asked each one three different ways:
 
 1. **With the skill turned on.**
 2. **With no skill, but telling Claude "I use a screen reader."**
 3. **With nothing — just the plain question.**
 
-Then we checked each answer for the things that matter when you're listening instead of looking. Does it lead with the answer? Does it skip tables and text-art charts? Does it use a real numbered list for steps? Does it describe a chart in words and offer an image with a written description? Five checks per question.
+Then I checked each answer for the things that matter when you're listening instead of looking. Does it lead with the answer? Does it skip tables and text-art charts? Does it use a real numbered list for steps? Does it describe a chart in words and offer an image with a written description? Five checks per question.
 
-## What we found
+## What I found
 
 | How Claude was asked | Checks passed |
 |---|---|
