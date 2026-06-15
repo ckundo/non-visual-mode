@@ -1,0 +1,75 @@
+{
+  "skill_name": "non-visual-mode",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Compare npm, yarn, and pnpm \u2014 install speed, disk usage, and lockfile format.",
+      "expected_output": "Baits a comparison TABLE. Want: prose with labels repeated per value, no markdown table, answer-first.",
+      "files": [],
+      "expectations": [
+        "No markdown table \u2014 tabular comparison rendered as prose, not a pipe grid",
+        "Leads with the direct answer/recommendation in the first sentence (BLUF)",
+        "Each dimension stated in prose with the tool name repeated against its value (no reliance on a grid)",
+        "No decorative emoji",
+        "Avoids non-navigable markdown headings (uses plain-text labels \u2014 headings don't navigate in a terminal)"
+      ],
+      "surface": "terminal (plain-text)"
+    },
+    {
+      "id": 1,
+      "prompt": "Show me how to write a Python decorator that retries a function on exception with exponential backoff.",
+      "expected_output": "Baits a long CODE DUMP. Want: prose description before the block, language named in prose, a few short focused blocks.",
+      "files": [],
+      "expectations": [
+        "A plain-language description of what the code does appears BEFORE the first code block",
+        "The language (Python) is named in prose, not only in the code fence",
+        "Code kept to a few short focused blocks rather than a long multi-block dump (<=3 fenced blocks)",
+        "No decorative emoji",
+        "Avoids non-navigable markdown headings (plain-text labels for a terminal)"
+      ],
+      "surface": "terminal (plain-text)"
+    },
+    {
+      "id": 2,
+      "prompt": "Summarize how OAuth 2.0's authorization code flow works.",
+      "expected_output": "Baits a WALL OF TEXT. Want: BLUF answer-first, ordered steps with the count stated in words, no headings/tables/emoji.",
+      "files": [],
+      "expectations": [
+        "Leads with a direct one-sentence answer (BLUF) before the detail",
+        "Flow given as an ordered sequence WITH the step count stated in words (e.g. 'six steps')",
+        "No markdown table",
+        "No decorative emoji",
+        "Avoids non-navigable markdown headings (plain-text labels for a terminal)"
+      ],
+      "surface": "terminal (plain-text)"
+    },
+    {
+      "id": 3,
+      "prompt": "Give me a structured rundown of the WCAG 2.2 POUR principles and what each covers.",
+      "expected_output": "GUARDRAIL on a rendered surface. Want: real headings + lists USED (not stripped), no unnecessary table.",
+      "files": [],
+      "expectations": [
+        "USES real markdown headings for the principles (navigable on a rendered surface \u2014 semantics not stripped)",
+        "USES real markdown lists for the sub-areas",
+        "Covers all four POUR principles",
+        "No decorative emoji",
+        "Conveys sub-areas as prose/lists rather than an unnecessary data table"
+      ],
+      "surface": "claude.ai (rendered HTML)"
+    },
+    {
+      "id": 4,
+      "prompt": "Chart our last 4 quarters of revenue: 1.2M, 1.9M, 2.5M, 3.4M.",
+      "expected_output": "Baits an ASCII CHART / image. Want: values + trend in words, no ASCII/box-drawing chart, any image offered with standalone alt.",
+      "files": [],
+      "expectations": [
+        "The per-quarter revenue values AND the trend are stated in words (data not locked in a visual)",
+        "No ASCII / box-drawing bar chart",
+        "No markdown table",
+        "Any offered chart image carries self-contained descriptive alt text (or the full data is already in prose)",
+        "No decorative emoji"
+      ],
+      "surface": "terminal (plain-text)"
+    }
+  ]
+}
